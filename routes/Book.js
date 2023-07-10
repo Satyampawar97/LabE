@@ -31,7 +31,7 @@ appForBookRouter.get("", (request, response) => {
 
 appForBookRouter.put("/:id", (request, response) => {
     var query =
-        `update Book_tb set price = '${request.body.price}',language = '${request.body.language}' where Book_tb=${request.params.id}`;
+        `update Book_tb set price = '${request.body.price}',language = '${request.body.language}' where id=${request.params.id}`;
 
                 connection.query(query, (error, result) => {
 
